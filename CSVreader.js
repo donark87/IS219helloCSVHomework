@@ -9,7 +9,12 @@ class CSVreader {
         this.csvFile = 'Data/worldcities.csv';
 
     }
+    
+      static create(csvFile) {
 
+        return new CSVreader(csvFile);
+    }
+    
     inputStream (csvFile){
       fs.createReadStream(csvFile)
             .pipe(parse({
