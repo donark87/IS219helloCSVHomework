@@ -10,6 +10,11 @@ test('Can create a CSVreader object', () => {
     let csvReader = new CSVreader();
     expect(csvReader).toBeInstanceOf(CSVreader);
 });
+test('Can create a CSVreader object', () => {
+    let csvReader = CSVreader.create(csvFile);
+    expect(csvReader).toBeInstanceOf(CSVreader);
+});
+
 test('Can read CVS file', () => {
     let csvReader = new CSVreader(csvFile);
     results = csvReader.inputStream;
